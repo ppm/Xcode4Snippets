@@ -1,0 +1,471 @@
+(
+	{
+		Identifier = ppm.objc;
+		Name = "Objective C (ppm)";
+		IsMenu = YES;
+		IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		ExcludeContexts = (
+			"xcode.lang.string",
+			"xcode.lang.character",
+			"xcode.lang.comment",
+			"xcode.lang.c.preprocessor",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.log.object";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "NSLog() Call (Object)";
+		TextString = "NSLog(@\"%@\", <#!object!#>);";
+		CompletionPrefix = lo;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+		{
+		Identifier = "ppm.objc.log.string";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "NSLog() Call (String)";
+		TextString = "NSLog(@\"<#!string!#>\");";
+		CompletionPrefix = ls;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+			{
+		Identifier = "ppm.objc.log.method";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "NSLog() Call (Method Name)";
+		TextString = "NSLog(@\"%s\", __PRETTY_FUNCTION__);";
+		CompletionPrefix = lm;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.log.methodAndObject";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "NSLog() Call (Method Name and Object)";
+		TextString = "NSLog(@\"%s %@\", __PRETTY_FUNCTION__, <#!object!#>);";
+		CompletionPrefix = lmo;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+		{
+		Identifier = "ppm.objc.log.cgrect";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "NSLog() Call (CGRect)";
+		TextString = "NSLog(@\"%@\", NSStringFromCGRect(<#!cgrect!#>));";
+		CompletionPrefix = lr;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.log.cgpoint";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "NSLog() Call (CGPoint)";
+		TextString = "NSLog(@\"%@\", NSStringFromCGPoint(<#!cgpoint!#>));";
+		CompletionPrefix = lp;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.log.float";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "NSLog() Call (float)";
+		TextString = "NSLog(@\"%f\", <#!float!#>);";
+		CompletionPrefix = lf;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.pragmamark";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "#Pragma Mark";
+		TextString = "//--------------------------------------------------------------//\n#pragma mark -- <#!title!#> --\n//--------------------------------------------------------------//";
+		CompletionPrefix = pp;
+		IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.init.object";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "init Definition";
+		TextString = "- (id)init\n{\n\tself = [super init];\n\tif (!self) {\n\t\treturn nil;\n\t}\n\n\t//\n\t// Init instance variables\n\t//\n\n\treturn self;\n}\n";
+		CompletionPrefix = pio;
+		IncludeContexts = (
+			"xcode.lang.objc.implementation",
+		);
+		ExcludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.init.object.archivable";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "init Definition (NSCoding complient)";
+		TextString = "- (id)initWithCoder:(NSCoder*)decoder\n{\n\tself = [super init];\n\tif (!self) {\n\t\treturn nil;\n\t}\n\n\t//\n\t// Init instance variables\n\t//\n\n\treturn self;\n}\n";
+		CompletionPrefix = pic;
+		IncludeContexts = (
+			"xcode.lang.objc.implementation",
+		);
+		ExcludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.init.view";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "init Definition (NSView Subclass)";
+		TextString = "- (id)initWithFrame:(NSRect)frameRect\n{\n\tself = [super initWithFrame:frameRect];\n\tif (!self) {\n\t\treturn nil;\n\t}\n\n\t//\n\t// Init instance variables\n\t//\n\n\treturn self;\n}\n";
+		CompletionPrefix = piv;
+		IncludeContexts = (
+			"xcode.lang.objc.implementation",
+		);
+		ExcludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.dealloc";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "dealloc Definition";
+		TextString = "- (void)dealloc\n{\n\t// Release instance variables\n\t<#!deallocations!#>\n\n\t// Invoke super\n\t[super dealloc];\n}\n";
+		CompletionPrefix = pd;
+		IncludeContexts = (
+			"xcode.lang.objc.implementation",
+		);
+		ExcludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.dealloc.release";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "release and Assign nil (dealloc)";
+		TextString = "[<#!ivar!#> release], <#ivar#> = nil;";
+		CompletionPrefix = pr;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.delegate";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "Call Delegate";
+		TextString = "if ([_delegate respondsToSelector:@selector(<#delegate method selector#>)]) {\n\t[_delegate <#delegate method#>];\n}\n";
+		CompletionPrefix = pdel;
+		IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.block.synchronized";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "@synchronized Block";
+		TextString = "@synchronized (<#!object!#>) {\n\t\n}";
+		CompletionPrefix = syn;
+		OnlyAtBOL = YES;
+	},
+		{
+		Identifier = "ppm.objc.headerdoc.1";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "HeaderDoc Type1";
+		TextString = "/*\n\t@method\n\t@abstruct\t<#!abstruct!#>\n*/";
+		CompletionPrefix = hd1;
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = "ppm.objc.headerdoc.hdd";
+		BasedOn = ppm.objc;
+		IsMenuItem = YES;
+		Name = "HeaderDoc Delegate Doc";
+		TextString = "/*!\n\t@method\n\t@abstract\tレシーバに設定されているデリゲートを返す￼。\n*/";
+		CompletionPrefix = hdd;
+		OnlyAtBOL = YES;
+	},
+		{
+            Identifier = "ppm.objc.bracket.square";
+            BasedOn = ppm.objc;
+            IsMenuItem = YES;
+            Name = "Bracket Expression (Square)";
+            TextString = "[<#!expression!#> ]";
+            CompletionPrefix = pbs;
+            CycleList = (
+            	 "ppm.objc.bracket.square",
+            	 "ppm.objc.bracket.parenthesis",
+            	 "ppm.objc.bracket.brace"
+            );
+        },
+	{
+            Identifier = "ppm.objc.bracket.parenthesis";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Bracket Expression (Parenthesis)";
+            TextString = "(<#!expression!#>)";
+            CompletionPrefix = pbp;
+        },
+       {
+            Identifier = "ppm.objc.bracket.brace";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Bracket Expression (Brace)";
+            TextString = "{\n<#!expression!#>\n}";
+            CompletionPrefix = pbb;
+        },
+{
+            Identifier = "ppm.objc.alert";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Alert  (UIAlertView)";
+            TextString = "\tUIAlertView* alertView;\n\talertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@\"<#!title!#>\", nil)\n\t\t\tmessage:NSLocalizedString(@\"<#message#>\", nil)\n\t\t\tdelegate:nil\n\t\t\tcancelButtonTitle:nil\n\t\t\totherButtonTitles:NSLocalizedString(@\"OK\", nil), nil];\n\t\n\t[alertView show];\n\t[alertView release];\n";
+            CompletionPrefix = pa;
+            IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+        },
+        {
+            Identifier = "ppm.objc.actionSheet";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Action Sheet";
+            TextString = "\tUIActionSheet* actionSheet;\n\tactionSheet = [[UIActionSheet alloc] initWithTitle:nil\n\t\t\tdelegate:nil\n\t\t\tcancelButtonTitle:NSLocalizedString(@\"Cancel\", nil)\n\t\t\tdestructiveButtonTitle:nil // NSLocalizedString(@\"Destructive\", nil)\n\t\t\totherButtonTitles:NSLocalizedString(@\"<#other button title#>\", nil), nil];\n\t\n\t[actionSheet showInView:self.view];\n\t[actionSheet release];\n";
+            CompletionPrefix = pa;
+            IncludeContexts = (
+			"xcode.lang.objc.block",
+		);
+		OnlyAtBOL = YES;
+        },
+        {
+            Identifier = "ppm.objc.notification.register";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Register for Notification";
+            TextString = "//\n// Register for notification\n//\nNSNotificationCenter* center;\ncenter = [NSNotificationCenter defaultCenter];\n\n// Register\n<#!registering code!#>";
+            CompletionPrefix = pnr;
+            IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+        },
+        {
+            Identifier = "ppm.objc.notification.unregister";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Unregister for Notification";
+            TextString = "//\n// Unregister for notification\n//\nNSNotificationCenter* center;\ncenter = [NSNotificationCenter defaultCenter];\n\n// Unregister\n<#!unregistering code!#>";
+            CompletionPrefix = pnu;
+            IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+        },
+        {
+            Identifier = "ppm.objc.notification.callback.declaration";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Notification Callback Declaration";
+            TextString = "- (void)_<#!name!#>:(NSNotification*)notification;";
+            CompletionPrefix = pnd;
+            IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+        },
+{
+            Identifier = "ppm.objc.notification.callback.implementation";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Notification Callback Implementation";
+            TextString = "- (void)_<#!name!#>:(NSNotification*)notification\n{\n\t<#code#>\n}";
+            CompletionPrefix = pni;
+            IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+        },
+        {
+            Identifier = "ppm.objc.interface.classExtension";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "Class Extension Interface";
+            TextString = "@interface <#!classname!#> ()\n\n\n@end";
+            CompletionPrefix = pice;
+            IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+        },
+        {
+            Identifier = "ppm.objc.tableview.datasource";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "UITableViewDataSource implementation";
+            TextString = "//--------------------------------------------------------------//\
+#pragma mark -- UITableViewDataSource --\
+//--------------------------------------------------------------//\
+\
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView\
+{\
+\	NSInteger numberOfSections;\
+\	numberOfSections = 1;\
+\	\
+\	return numberOfSections;\
+}\
+\
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section\
+{\
+\	NSInteger numberOfRows;\
+\	numberOfRows = 1;\
+\	\
+\	return numberOfRows;\
+}\
+\
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath\
+{\
+\	// Get section and row\
+\	NSUInteger section;\
+\	NSUInteger row;\
+\	section = indexPath.section;\
+\	row = indexPath.row;\
+\	\
+\	UITableViewCell* cell;\
+\	cell = [tableView dequeueReusableCellWithIdentifier:@\"default\"];\
+\	if (!cell) {\
+\	\	cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@\"default\"];\
+\	}\
+\	\
+\	cell.textLabel.text = @\"default\";\
+\	\
+\	return cell;\
+}";
+            CompletionPrefix = ptds;
+            IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+        },
+        {
+            Identifier = "ppm.objc.tableview.delegate";
+            BasedOn = ppm.objc;
+            IsMenuItem = NO;
+            Name = "UITableViewDelegate implementation";
+            TextString = "//--------------------------------------------------------------//\
+#pragma mark -- UITableViewDelegate --\
+//--------------------------------------------------------------//\
+\
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath\
+{\
+\	[tableView deselectRowAtIndexPath:indexPath animated:YES];\
+\	\
+\	// Get section and row\
+\	NSUInteger section;\
+\	NSUInteger row;\
+\	section = indexPath.section;\
+\	row = indexPath.row;\
+\	\	\
+}";
+            CompletionPrefix = ptde;
+            IncludeContexts = (
+			"xcode.lang.objc",
+		);
+		OnlyAtBOL = YES;
+        },
+	{
+		Identifier = ppm.c;
+		Name = "C (ppm)";
+		IsMenu = YES;
+		IncludeContexts = (
+			"xcode.lang.c",
+		);
+		ExcludeContexts = (
+			"xcode.lang.string",
+			"xcode.lang.character",
+			"xcode.lang.comment",
+			"xcode.lang.c.preprocessor",
+		);
+		OnlyAtBOL = YES;
+	},
+     {
+        Identifier = ppm.c.block.switch;
+        BasedOn = ppm.c;
+        Name = "Switch Block";
+        IsMenuItem = YES;
+        Command = "switch";
+        TextString = "switch (<#!expression!#>) {\n\tcase <#constant#>: {\n\t\t<#statements#>\n\n\t\tbreak;\n\t}\n\tdefault: {\n\t\tbreak;\n\t}\n}";
+        CompletionPrefix = ps;
+        OnlyAtBOL = YES;
+    },
+	{
+		Identifier = ppm.c.caseblock;
+		BasedOn = ppm.c;
+		IsMenuItem = YES;
+		Name = "Case Block";
+		TextString = "case <#constant#>: {\n\t<#!statements!#>\n\n\tbreak;\n}";
+		CompletionPrefix = pc;
+		IncludeContexts = ( "xcode.lang.c.block", "xcode.lang.java.block" );    // this works in Java too
+		ExcludeContexts = ( "xcode.lang.string", "xcode.lang.character", "xcode.lang.comment", "xcode.lang.c.preprocessor", "xcode.lang.c.parenexpr", "xcode.lang.c.bracketexpr" );
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = ppm.c.measurement.setup;
+		BasedOn = ppm.c;
+		IsMenuItem = YES;
+		Name = "Measurement Setup";
+		TextString = "#define MEASUREMENT\n#ifdef MEASUREMENT\nprintf(\"========\\n\");\n\nCFAbsoluteTime time;\ntime = CFAbsoluteTimeGetCurrent();\n#endif";
+		CompletionPrefix = pms;
+		IncludeContexts = ( "xcode.lang.c.block");
+		ExcludeContexts = ( "xcode.lang.string", "xcode.lang.character", "xcode.lang.comment", "xcode.lang.c.preprocessor", "xcode.lang.c.parenexpr", "xcode.lang.c.bracketexpr" );
+		OnlyAtBOL = YES;
+	},
+	{
+		Identifier = ppm.c.measurement.log;
+		BasedOn = ppm.c;
+		IsMenuItem = YES;
+		Name = "Measurement Log";
+		TextString = "#ifdef MEASUREMENT\nprintf(\"<#!label!#>: %f\\n\", CFAbsoluteTimeGetCurrent() - time);\ntime = CFAbsoluteTimeGetCurrent();\n#endif";
+		CompletionPrefix = pml;
+		IncludeContexts = ( "xcode.lang.c.block");
+		ExcludeContexts = ( "xcode.lang.string", "xcode.lang.character", "xcode.lang.comment", "xcode.lang.c.preprocessor", "xcode.lang.c.parenexpr", "xcode.lang.c.bracketexpr" );
+		OnlyAtBOL = YES;
+	},
+)
+	

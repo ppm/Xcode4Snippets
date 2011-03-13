@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pio</string>
+	<key>IDECodeSnippetContents</key>
+	<string>- (id)init
+{
+	self = [super init];
+	if (!self) {
+		return nil;
+	}
+
+	//
+	// Init instance variables
+	//
+
+	return self;
+}
+</string>
+	<key>IDECodeSnippetExcludeContexts</key>
+	<array>
+		<string>xcode.lang.objc.block</string>
+	</array>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B855DC21-3341-48A6-AD99-50209369ACD5</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc.implementation</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>init Definition</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pms</string>
+	<key>IDECodeSnippetContents</key>
+	<string>#define MEASUREMENT
+#ifdef MEASUREMENT
+printf("========\n");
+
+CFAbsoluteTime time;
+time = CFAbsoluteTimeGetCurrent();
+#endif</string>
+	<key>IDECodeSnippetExcludeContexts</key>
+	<array>
+		<string>xcode.lang.string</string>
+		<string>xcode.lang.character</string>
+		<string>xcode.lang.comment</string>
+		<string>xcode.lang.c.preprocessor</string>
+		<string>xcode.lang.c.parenexpr</string>
+		<string>xcode.lang.c.bracketexpr</string>
+	</array>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D0CFCCA4-3D78-4493-A1CC-04F0D04D4D98</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.c.block</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Measurement Setup</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>

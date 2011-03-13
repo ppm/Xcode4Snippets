@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pa</string>
+	<key>IDECodeSnippetContents</key>
+	<string>	UIActionSheet* actionSheet;
+	actionSheet = [[UIActionSheet alloc] initWithTitle:nil
+			delegate:nil
+			cancelButtonTitle:NSLocalizedString(@"Cancel", nil)
+			destructiveButtonTitle:nil // NSLocalizedString(@"Destructive", nil)
+			otherButtonTitles:NSLocalizedString(@"&lt;#other button title#&gt;", nil), nil];
+	
+	[actionSheet showInView:self.view];
+	[actionSheet release];
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>69C4D22F-7366-4EF6-B067-4DE713F5A37C</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc.block</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Action Sheet</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>
