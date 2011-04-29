@@ -353,6 +353,7 @@
 \	cell = [tableView dequeueReusableCellWithIdentifier:@\"default\"];\
 \	if (!cell) {\
 \	\	cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@\"default\"];\
+\	\	[cell autorelease];\
 \	}\
 \	\
 \	cell.textLabel.text = @\"default\";\
