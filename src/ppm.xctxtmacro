@@ -204,24 +204,6 @@
 		OnlyAtBOL = YES;
 	},
 		{
-		Identifier = "ppm.objc.headerdoc.1";
-		BasedOn = ppm.objc;
-		IsMenuItem = YES;
-		Name = "HeaderDoc Type1";
-		TextString = "/*\n\t@method\n\t@abstruct\t<#!abstruct!#>\n*/";
-		CompletionPrefix = hd1;
-		OnlyAtBOL = YES;
-	},
-	{
-		Identifier = "ppm.objc.headerdoc.hdd";
-		BasedOn = ppm.objc;
-		IsMenuItem = YES;
-		Name = "HeaderDoc Delegate Doc";
-		TextString = "/*!\n\t@method\n\t@abstract\tレシーバに設定されているデリゲートを返す￼。\n*/";
-		CompletionPrefix = hdd;
-		OnlyAtBOL = YES;
-	},
-		{
             Identifier = "ppm.objc.bracket.square";
             BasedOn = ppm.objc;
             IsMenuItem = YES;
