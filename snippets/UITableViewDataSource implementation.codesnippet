@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ptds</string>
+	<key>IDECodeSnippetContents</key>
+	<string>//--------------------------------------------------------------//
+#pragma mark -- UITableViewDataSource --
+//--------------------------------------------------------------//
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
+{
+	NSInteger numberOfSections;
+	numberOfSections = 1;
+	
+	return numberOfSections;
+}
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	NSInteger numberOfRows;
+	numberOfRows = 1;
+	
+	return numberOfRows;
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	// Get section and row
+	NSUInteger section;
+	NSUInteger row;
+	section = indexPath.section;
+	row = indexPath.row;
+	
+	UITableViewCell* cell;
+	cell = [tableView dequeueReusableCellWithIdentifier:@"default"];
+	if (!cell) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"default"];
+		[cell autorelease];
+	}
+	
+	cell.textLabel.text = @"default";
+	
+	return cell;
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9C74DBC3-E18C-44F2-BABB-A5D4DEF927CE</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITableViewDataSource implementation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pice</string>
+	<key>IDECodeSnippetContents</key>
+	<string>@interface &lt;#!classname!#&gt; ()
+
+
+@end</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FE25744F-A2AD-4E93-ADA9-DCD36C5FED98</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Class Extension Interface</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>

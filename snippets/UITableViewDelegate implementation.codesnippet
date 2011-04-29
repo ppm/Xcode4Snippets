@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>ptde</string>
+	<key>IDECodeSnippetContents</key>
+	<string>//--------------------------------------------------------------//
+#pragma mark -- UITableViewDelegate --
+//--------------------------------------------------------------//
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	
+	// Get section and row
+	NSUInteger section;
+	NSUInteger row;
+	section = indexPath.section;
+	row = indexPath.row;
+		
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2AD0EC01-36B7-4DD2-BCCF-4C7CD31BB88F</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITableViewDelegate implementation</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pd</string>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)dealloc
+{
+	// Release instance variables
+	&lt;#!deallocations!#&gt;
+
+	// Invoke super
+	[super dealloc];
+}
+</string>
+	<key>IDECodeSnippetExcludeContexts</key>
+	<array>
+		<string>xcode.lang.objc.block</string>
+	</array>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FC8C9E3D-54AD-43D8-9927-DDE200704CC3</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc.implementation</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>dealloc Definition</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>piv</string>
+	<key>IDECodeSnippetContents</key>
+	<string>- (id)initWithFrame:(NSRect)frameRect
+{
+	self = [super initWithFrame:frameRect];
+	if (!self) {
+		return nil;
+	}
+
+	//
+	// Init instance variables
+	//
+
+	return self;
+}
+</string>
+	<key>IDECodeSnippetExcludeContexts</key>
+	<array>
+		<string>xcode.lang.objc.block</string>
+	</array>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A3C76725-3D8B-40B6-9B31-156229E91754</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc.implementation</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>init Definition (NSView Subclass)</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>

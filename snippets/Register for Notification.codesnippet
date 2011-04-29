@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>pnr</string>
+	<key>IDECodeSnippetContents</key>
+	<string>//
+// Register for notification
+//
+NSNotificationCenter* center;
+center = [NSNotificationCenter defaultCenter];
+
+// Register
+&lt;#!registering code!#&gt;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D8D2276F-878A-4FE4-AF5F-6830BD3C055A</string>
+	<key>IDECodeSnippetIncludeContexts</key>
+	<array>
+		<string>xcode.lang.objc</string>
+	</array>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Register for Notification</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+</dict>
+</plist>
